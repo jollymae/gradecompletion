@@ -17,7 +17,7 @@
           </blockquote>
           <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
             <a href="#services-list" class="btn-get-started">Get Started</a>
-            <a href="https://www.youtube.com/watch?v=KIvC5wsoW2Y" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+            <a href="https://youtu.be/nLwML2PagbY?si=X_nE6kV6otNFai6M" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
           </div>
 
         </div>
@@ -47,7 +47,7 @@
 
                 <div class="swiper-slide">
                   <div class="item">
-                    <h3 class="mb-3">We Are a Trusted Name In Auto</h3>
+                    <h3 class="mb-3">We Are A Trusted Name In Auto</h3>
                     <h4 class="mb-3">We are a trusted auto partner, excelling in sales, rentals, and maintenance for an exceptional experience where excellence meets satisfaction.</h4>
                     <p>Auto|Hub stands out for its commitment to top-tier driving experiences. Our rigorously inspected car selection ensures vehicles meet the highest performance and safety standards, making us your reliable partner for automotive excellence.</p>
                   </div>

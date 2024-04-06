@@ -37,7 +37,7 @@
 
       <div class="col-lg-4">
         <div class="portfolio-info">
-          <h3>Project information</h3>
+          <h3>Car Details</h3>
           <ul>
           <div class="summary-list">
                 <ul class="list">
@@ -45,10 +45,6 @@
                   <li class="d-flex justify-content-between">
                     <strong>VIN:</strong>
                     <strong>{{$car->vin}}</strong>
-                  </li>
-                  <li class="d-flex justify-content-between">
-                    <strong>Vehicle:</strong>
-                    <strong>{{$car->model_name}}</strong>
                   </li>
                   <li class="d-flex justify-content-between">
                     <strong>Brand:</strong>
@@ -72,9 +68,32 @@
                   </li>
                 </ul>
         </div>
+        <div class="buy-car">
+          <a href="{{route('customer')}}"><button type="buy-car">Buy Car</button></a>
+        </div>
       </div>
-
     </div>
+
+  <style>
+    .buy-car button[type="buy-car"] {
+    background-color: #007bff; /* Blue background color */
+    color: #ffffff; /* White text color */
+    padding: 10px 110px; /* Padding around the button text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Cursor style */
+    text-decoration: none; /* Remove default button text decoration */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+
+  .buy-car button[type="buy-car"]:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+  }
+
+  </style>
 
   </div>
 </section><!-- End Portfolio Details Section -->

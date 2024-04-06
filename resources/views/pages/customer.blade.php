@@ -1,109 +1,179 @@
-<!-- Section: Design Block -->
-@extends('layout.app')
 
-@section('contents')
 
 
 <section class="text-center mt-5">
-    <!-- Background image -->
-    <div class="p-5 bg-image" style="
-        background-image: url('https://mdbootstrap.com/img/new/textures/full/171.jpg');
-        height: 300px;
-        "></div>
-    <!-- Background image -->
-
-    <div class="card mx-4 mx-md-5 shadow-5-strong" style="
-        margin-top: -100px;
-        background: hsla(0, 0%, 100%, 0.8);
-        backdrop-filter: blur(30px);
-        ">
-        <div class="card-body py-5 px-md-5">
-
-            <div class="row d-flex justify-content-center">
-                <div class="col-lg-8">
-                    <h2 class="fw-bold mb-5">Customer Details</h2>
-
-                    <form action="{{ route('registercustomer') }}" method="POST">
-
-                        @csrf
-                        @if($errors->any())
-                        <div class="alert alert-danger">
-
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                        @endif
-
-
-                        <!-- 2 column grid layout with text inputs for the first and last names -->
-                        <div class="row">
-
-
-                            <!-- Email input -->
-
-
-
-                            <!-- Password input -->
-                            <div class="form-outline mb-4">
-                                <label class="form-label" for="form3Example4">Name</label>
-                                <input type="text" name="name" id="form3Example4" class="form-control" />
-                            </div>
-
-                            <div class="form-outline mb-4">
-                                <label class="form-label" for="form3Example3">Address</label>
-                                <input type="text" id="form3Example3" name="address" class="form-control" />
-                            </div>
-
-                            <div class="form-outline mb-4">
-                                <label class="form-label" for="form3Example3">Gender</label>
-                                <input type="text" id="form3Example3" name="gender" class="form-control" />
-                            </div>
-
-                            <div class="form-outline mb-4">
-                                <label class="form-label" for="form3Example3">Phone</label>
-                                <input type="text" id="form3Example3" name="phone" class="form-control" />
-                            </div>
-
-                            <div class="form-outline mb-4">
-                                <label class="form-label" for="form3Example3">Annual Income</label>
-                                <input type="number" id="form3Example3" name="annual_income" class="form-control" />
-                            </div>
-
-
-
-                            <!-- Submit button -->
-                            <button type="submit" class="btn btn-primary btn-block mb-4">
-                                Buy
-                            </button>
-
-                            <!-- Register buttons -->
-                            <div class="text-center">
-
-                                <button type="button" class="btn btn-link btn-floating mx-1">
-                                    <i class="fab fa-facebook-f"></i>
-                                </button>
-
-                                <button type="button" class="btn btn-link btn-floating mx-1">
-                                    <i class="fab fa-google"></i>
-                                </button>
-
-                                <button type="button" class="btn btn-link btn-floating mx-1">
-                                    <i class="fab fa-twitter"></i>
-                                </button>
-
-                                <button type="button" class="btn btn-link btn-floating mx-1">
-                                    <i class="fab fa-github"></i>
-                                </button>
-                            </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+   
+    <div class="back-to-cars">
+    <a href="{{route('vehicles')}}" button type=""back-to-cars>Back to Cars</a>
+   </div>
+   
+    <form action="{{ route('registercustomer') }}" method="POST">
+    @csrf
+        @if($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
     </div>
+        @endif
+    
+   
+  <!-- Name container -->
+  <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name">
+    </div>
+
+    <!-- Address container -->
+    <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" class="form-control" id="address" name="address" placeholder="Enter Address">
+    </div>
+
+    <!-- Gender container -->
+    <div class="form-group">
+        <label for="gender">Gender</label>
+        <input type="text" class="form-control" id="gender" name="gender" placeholder="Enter Gender">
+    </div>
+
+    <!-- Phone container -->
+    <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter Phone">
+    </div>
+
+    <!-- Annual Income container -->
+    <div class="form-group">
+        <label for="annual_income">Annual Income</label>
+        <input type="number" class="form-control" id="annual_income" name="annual_income" placeholder="Enter Annual Income">
+    </div>
+
+    <!-- Submit button -->
+    <a href="{{route('thankyou')}}"><button type="submit" class="btn btn-primary btn-block mt-4">Buy</button></a>
+
+    
+    <style>
+  /* Style the form container */
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+
+  /* Style form labels */
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+  }
+
+  /* Style form inputs */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding and border included in width */
+    font-size: 16px;
+  }
+   /* Style file input container */
+   .file-input-container {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+
+  /* Style custom file input button */
+  .custom-file-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+  }
+
+  /* Style file input button */
+  .file-input-button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+
+  .file-input-button:hover {
+    background-color: #0056b3;
+  }
+
+  /* Style submit button */
+  button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px; /* Added margin-top to reduce gap */
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+
+
+  /* Style form container background */
+  body {
+    background-color: #f4f4f4;
+    padding: 30px;
+  }
+
+  /* Style back to cars container */
+  .back-to-cars {
+    margin-bottom: 15px; /* Adjust spacing as needed */
+  }
+
+  /* Style back to cars button */
+  .back-to-cars a {
+    padding: 15px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: Arial, sans-serif; /* Specify font-family */
+    font-size: 16px;
+  }
+
+  .back-to-cars a:hover {
+    background-color: #0056b3;
+  }
+</style>
+
+</form>
+
 </section>
 <!-- Section: Design Block -->
 
-@endsection

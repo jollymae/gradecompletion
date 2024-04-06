@@ -38,7 +38,6 @@
           </div>
           <div class="member-info">
             <h4>{{$user->name}}</h4>
-            <span>{{ $user->image }}</span>
           </div>
         </div>
       </div><!-- End Team Member -->

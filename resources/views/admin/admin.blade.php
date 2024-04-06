@@ -32,13 +32,16 @@
 </head>
 <body>
   
+<div class="back-to-home">
+  <a href="{{route('home')}}"><button type="back to home">Back to Home</button></a>
+</div>
+
 
 <form action="{{route('registerDealear')}}" method="POST" enctype="multipart/form-data">
 
  @csrf
  
  
-
   <div class="form-group">
     <label for="name">Name</label>
     <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name">
@@ -61,6 +64,140 @@
   
 
   <button type="submit" class="btn btn-primary w-full mt-5">Submit</button>
+
+
+  <style>
+  /* Style the form container */
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Style form labels */
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+  }
+
+  /* Style form inputs */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding and border included in width */
+    font-size: 16px;
+  }
+
+  /* Style file input container */
+  .file-input-container {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+
+  /* Style custom file input button */
+  .custom-file-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+  }
+
+  /* Style file input button */
+  .file-input-button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+
+  .file-input-button:hover {
+    background-color: #0056b3;
+  }
+
+  /* Style submit button */
+  button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10%; /* Added margin-top to reduce gap */
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+  /* Style form group */
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  /* Style form error messages */
+  .error-message {
+    color: red;
+    margin-top: 5px;
+  }
+
+  /* Style form header */
+  .form-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  /* Style form container background */
+  body {
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  
+  .back-to-home {
+    margin-bottom: 20px; /* Adjust spacing as needed */
+  }
+
+  .back-to-home button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .back-to-home button:hover {
+    background-color: #0056b3;
+  }
+</style>
+
+
+
+
+
+
  
 </form>
 
