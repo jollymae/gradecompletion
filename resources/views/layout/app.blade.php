@@ -59,6 +59,8 @@
           <li><a href="{{ route('home') }}" class="active">Home</a></li>
           <li><a href="{{ route('vehicles') }}">Vehicles</a></li>
           <li><a href="{{ route('dealers') }}">Dealers</a></li>
+          <li><a href="inventory.blade.php">Inventories</a></li>
+
           <li class="dropdown"><a href="#"><span>Admin</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li><a href="{{ route('caradmin')}}">Store Vehicle</a></li>

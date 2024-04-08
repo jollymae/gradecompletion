@@ -53,7 +53,7 @@
         <p>The car you bought is being reserved.</p>
         <form action="{{route('vehicles')}}" method="get">
             <!-- You can replace "#" with the URL where you want to submit the form -->
-            <input type="submit" value="Confirm">
+            <input type="submit" value="Done">
         </form>
     </div>
 </body>

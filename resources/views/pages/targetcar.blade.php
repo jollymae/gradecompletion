@@ -66,6 +66,10 @@
                     <strong>Transmission:</strong>
                     <strong>{{$car->transmission}}</strong>
                   </li>
+                  <li class="d-flex justify-content-between">
+                    <strong>Body Style:</strong>
+                    <strong>{{$car->body_style}}</strong>
+                  </li>
                 </ul>
         </div>
         <div class="buy-car">
